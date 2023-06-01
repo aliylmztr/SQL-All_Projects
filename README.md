@@ -5,7 +5,7 @@ www.patika.dev
 
 ----------------------------------------------
 
------ SQL-Odev1 | SELECT | WHERE | Karşılaştırma ve Mantıksal Operatörler -----
+--------------- SQL-Odev1 | SELECT | WHERE | Karşılaştırma ve Mantıksal Operatörler ---------------
 
 Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden gerçekleştiriniz.
 
