@@ -5,7 +5,7 @@ www.patika.dev
 
 ----------------------------------------------
 
---------------- SQL-Odev1 | SELECT | WHERE | Karşılaştırma ve Mantıksal Operatörler ---------------
+----- SQL-Odev1 | SELECT | WHERE | Karşılaştırma ve Mantıksal Operatörler -----
 
 Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden gerçekleştiriniz.
 
@@ -30,7 +30,7 @@ WHERE length <= 50 AND NOT (rental_rate = 2.99 OR rental_rate = 4.99);
 
 ----------------------------------------------
 
-" SQL-Odev2 | BETWEEN ve IN "
+----- SQL-Odev2 | BETWEEN ve IN -----
 
 Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden gerçekleştiriniz.
 
@@ -51,7 +51,7 @@ WHERE rental_rate IN (0.99, 2.99, 4.99) AND replacement_cost IN (12.99, 15.99, 2
 
 ----------------------------------------------
 
-" SQL-Odev3 | LIKE ve ILIKE "
+----- SQL-Odev3 | LIKE ve ILIKE -----
 
 Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden gerçekleştiriniz.
 
@@ -77,7 +77,7 @@ WHERE title LIKE 'C%' AND length > 90 AND rental_rate = 2.99;
 
 ----------------------------------------------
 
-" SQL-Odev4 | DISTINCT ve COUNT "
+----- SQL-Odev4 | DISTINCT ve COUNT -----
 
 Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden gerçekleştiriniz.
 
@@ -106,7 +106,7 @@ WHERE city ILIKE '%R';
 
 ----------------------------------------------
 
-" SQL-Odev5 | ORDER BY | LIMIT ve OFFSET "
+----- SQL-Odev5 | ORDER BY | LIMIT ve OFFSET -----
 
 Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden gerçekleştiriniz.
 
@@ -127,7 +127,7 @@ WHERE store_id = 1 ORDER BY last_name DESC LIMIT 4;
 
 ----------------------------------------------
 
-" SQL-Odev6 | Aggregate Fonksiyonlar "
+----- SQL-Odev6 | Aggregate Fonksiyonlar -----
 
 Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden gerçekleştiriniz.
 
@@ -152,7 +152,7 @@ WHERE length > 150;
 
 ----------------------------------------------
 
-" SQL-Odev7 | GROUP BY | HAVING "
+----- SQL-Odev7 | GROUP BY | HAVING -----
 
 Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden gerçekleştiriniz.
 
@@ -177,7 +177,7 @@ GROUP BY country_id ORDER BY COUNT(*) DESC LIMIT 1;
 
 ----------------------------------------------
 
-" SQL-Odev8 | CREATE | DROP | INSERT INTO | UPDATE & SET | DELETE "
+----- SQL-Odev8 | CREATE | DROP | INSERT INTO | UPDATE & SET | DELETE -----
 
 1. test veritabanınızda employee isimli sütun bilgileri id(INTEGER), name VARCHAR(50), birthday DATE, email VARCHAR(100) olan bir tablo oluşturalım.
 
@@ -191,54 +191,103 @@ CREATE TABLE employee (
 2. Oluşturduğumuz employee tablosuna 'Mockaroo' servisini kullanarak 50 adet veri ekleyelim.
 
 insert into employee (id, name, birthday, email) values (1, 'Rosemary', '2021-01-16', 'rhofton0@gmpg.org');
+
 insert into employee (id, name, birthday, email) values (2, 'Eolande', '1941-10-31', 'ecamus1@ucoz.ru');
+
 insert into employee (id, name, birthday, email) values (3, 'Constantin', '1934-05-06', 'camyes2@storify.com');
+
 insert into employee (id, name, birthday, email) values (4, 'Monti', '1998-01-18', 'mstonuary3@blinklist.com');
+
 insert into employee (id, name, birthday, email) values (5, 'Akim', '1962-11-12', 'agribbin4@csmonitor.com');
+
 insert into employee (id, name, birthday, email) values (6, 'Trev', null, 'tdomnick5@skyrock.com');
+
 insert into employee (id, name, birthday, email) values (7, 'Eddie', null, 'erosbotham6@newyorker.com');
+
 insert into employee (id, name, birthday, email) values (8, 'Augusta', null, 'averry7@phpbb.com');
+
 insert into employee (id, name, birthday, email) values (9, 'Mollee', null, 'memney8@topsy.com');
+
 insert into employee (id, name, birthday, email) values (10, 'Fanechka', '1958-03-20', 'fringsell9@latimes.com');
+
 insert into employee (id, name, birthday, email) values (11, 'Cheslie', null, 'cletteressea@addtoany.com');
+
 insert into employee (id, name, birthday, email) values (12, 'Torre', '1944-09-08', 'tskehensb@illinois.edu');
+
 insert into employee (id, name, birthday, email) values (13, 'Marjorie', '1935-04-15', 'mvollamc@slideshare.net');
+
 insert into employee (id, name, birthday, email) values (14, 'Jonathan', '1992-09-10', null);
+
 insert into employee (id, name, birthday, email) values (15, 'Wendall', '1942-03-09', 'wgrimwade@independent.co.uk');
+
 insert into employee (id, name, birthday, email) values (16, 'Selinda', '2019-09-10', 'sollertonf@moonfruit.com');
+
 insert into employee (id, name, birthday, email) values (17, 'Artemus', '1961-08-11', 'anucciig@free.fr');
+
 insert into employee (id, name, birthday, email) values (18, 'Enrico', null, 'evaterh@examiner.com');
+
 insert into employee (id, name, birthday, email) values (19, 'Deane', null, 'dhaironi@goo.gl');
+
 insert into employee (id, name, birthday, email) values (20, 'Carce', '1953-01-14', 'cleaknerj@youtube.com');
+
 insert into employee (id, name, birthday, email) values (21, 'Annora', '1960-05-16', 'agwynnk@harvard.edu');
+
 insert into employee (id, name, birthday, email) values (22, 'Caryl', '1958-07-03', 'cdimontl@webnode.com');
+
 insert into employee (id, name, birthday, email) values (23, 'Garwin', '1943-03-24', 'gfakem@ucsd.edu');
+
 insert into employee (id, name, birthday, email) values (24, 'Laraine', '1970-04-04', 'lbalchenn@xing.com');
+
 insert into employee (id, name, birthday, email) values (25, 'Clara', '1983-07-07', 'cmcgenniso@indiatimes.com');
+
 insert into employee (id, name, birthday, email) values (26, 'Aurelie', '1934-10-08', 'acockroftp@csmonitor.com');
+
 insert into employee (id, name, birthday, email) values (27, 'George', '2023-02-18', 'gpoleq@va.gov');
+
 insert into employee (id, name, birthday, email) values (28, 'Harriett', null, 'hhummerstonr@cbslocal.com');
+
 insert into employee (id, name, birthday, email) values (29, 'Tiffi', '1980-07-31', 'tstammlers@sourceforge.net');
+
 insert into employee (id, name, birthday, email) values (30, 'Joelly', '1962-10-24', 'jgussint@princeton.edu');
+
 insert into employee (id, name, birthday, email) values (31, 'Trace', '1946-09-16', 'ttriggelu@blog.com');
+
 insert into employee (id, name, birthday, email) values (32, 'Emmaline', '1978-01-22', 'elanbertoniv@skyrock.com');
+
 insert into employee (id, name, birthday, email) values (33, 'Monica', '1926-01-11', 'mchatinw@tmall.com');
+
 insert into employee (id, name, birthday, email) values (34, 'Cherrita', '1974-03-11', 'cswettenhamx@earthlink.net');
+
 insert into employee (id, name, birthday, email) values (35, 'Isidor', '2021-06-09', 'iantonichy@mtv.com');
+
 insert into employee (id, name, birthday, email) values (36, 'Sabine', '1995-11-01', 'sledramz@guardian.co.uk');
+
 insert into employee (id, name, birthday, email) values (37, 'Hamlin', '1966-05-01', null);
+
 insert into employee (id, name, birthday, email) values (38, 'Benedicta', '1970-09-25', 'bjales11@issuu.com');
+
 insert into employee (id, name, birthday, email) values (39, 'Rollie', null, 'rmcnelly12@qq.com');
+
 insert into employee (id, name, birthday, email) values (40, 'Candice', '1936-03-28', null);
+
 insert into employee (id, name, birthday, email) values (41, 'Ronica', '1941-12-30', 'rrosina14@hostgator.com');
+
 insert into employee (id, name, birthday, email) values (42, 'Silvan', '1970-12-19', 'sshillingford15@vinaora.com');
+
 insert into employee (id, name, birthday, email) values (43, 'Baxie', '1944-01-23', 'btomasik16@edublogs.org');
+
 insert into employee (id, name, birthday, email) values (44, 'Maureene', '1970-07-02', 'mstenton17@nps.gov');
+
 insert into employee (id, name, birthday, email) values (45, 'Desiree', null, 'dkarpushkin18@dailymotion.com');
+
 insert into employee (id, name, birthday, email) values (46, 'Car', '2012-01-19', 'cbrehaut19@abc.net.au');
+
 insert into employee (id, name, birthday, email) values (47, 'Kakalina', '1928-09-01', 'kanstice1a@aboutads.info');
+
 insert into employee (id, name, birthday, email) values (48, 'Jourdain', '1987-11-02', 'jhawtry1b@indiatimes.com');
+
 insert into employee (id, name, birthday, email) values (49, 'Ciel', '2016-01-07', null);
+
 insert into employee (id, name, birthday, email) values (50, 'Berget', '2021-05-01', 'bwharrier1d@slideshare.net');
 
 3. Sütunların her birine göre diğer sütunları güncelleyecek 5 adet UPDATE işlemi yapalım.
@@ -310,7 +359,7 @@ RETURNING *;
 
 ----------------------------------------------
 
-" SQL-Odev9 | INNER JOIN "
+----- SQL-Odev9 | INNER JOIN -----
 
 Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden gerçekleştiriniz.
 
@@ -331,7 +380,7 @@ INNER JOIN rental ON customer.customer_id = rental.customer_id;
 
 ----------------------------------------------
 
-" SQL-Odev10 | LEFT JOIN | RIGHT JOIN | FULL JOIN "
+----- SQL-Odev10 | LEFT JOIN | RIGHT JOIN | FULL JOIN -----
 
 Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden gerçekleştiriniz.
 
@@ -352,7 +401,7 @@ FULL JOIN rental ON customer.customer_id = rental.customer_id;
 
 ----------------------------------------------
 
-" SQL-Odev11 | UNION | INTERSECT ve EXCEPT "
+----- SQL-Odev11 | UNION | INTERSECT ve EXCEPT -----
 
 Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden gerçekleştiriniz.
 
@@ -396,7 +445,7 @@ EXCEPT ALL
 
 ----------------------------------------------
 
-" SQL-Odev12 | Subquery | ANY | ALL "
+----- SQL-Odev12 | Subquery | ANY | ALL -----
 
 Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden gerçekleştiriniz.
 
@@ -426,7 +475,7 @@ GROUP BY customer_id ORDER BY COUNT(*) DESC;
 
 ----------------------------------------------
 
-" SQL-Odev13 | An Overview "
+----- SQL-Odev13 | An Overview -----
 
 Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden gerçekleştiriniz.
 
