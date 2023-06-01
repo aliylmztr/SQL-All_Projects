@@ -179,8 +179,6 @@ GROUP BY country_id ORDER BY COUNT(*) DESC LIMIT 1;
 
 " SQL-Odev8 | CREATE | DROP | INSERT INTO | UPDATE & SET | DELETE "
 
-Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden gerçekleştiriniz.
-
 1. test veritabanınızda employee isimli sütun bilgileri id(INTEGER), name VARCHAR(50), birthday DATE, email VARCHAR(100) olan bir tablo oluşturalım.
 
 CREATE TABLE employee (
@@ -310,4 +308,152 @@ DELETE FROM employee
 WHERE id > 20
 RETURNING *;
 
+----------------------------------------------
+
+" SQL-Odev9 | INNER JOIN "
+
+Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden gerçekleştiriniz.
+
+1. city tablosu ile country tablosunda bulunan şehir (city) ve ülke (country) isimlerini birlikte görebileceğimiz INNER JOIN sorgusunu yazınız.
+
+SELECT city, country FROM city
+INNER JOIN country ON city.country_id = country.country_id;
+
+2. customer tablosu ile payment tablosunda bulunan payment_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz INNER JOIN sorgusunu yazınız.
+
+SELECT payment.payment_id, customer.first_name, customer.last_name FROM customer
+INNER JOIN payment ON customer.customer_id = payment.customer_id;
+
+3. customer tablosu ile rental tablosunda bulunan rental_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz INNER JOIN sorgusunu yazınız.
+
+SELECT rental.rental_id, customer.first_name, customer.last_name FROM customer
+INNER JOIN rental ON customer.customer_id = rental.customer_id;
+
+----------------------------------------------
+
+" SQL-Odev10 | LEFT JOIN | RIGHT JOIN | FULL JOIN "
+
+Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden gerçekleştiriniz.
+
+1. city tablosu ile country tablosunda bulunan şehir (city) ve ülke (country) isimlerini birlikte görebileceğimiz LEFT JOIN sorgusunu yazınız.
+
+SELECT city.city, country.country FROM city
+LEFT JOIN country ON city.country_id = country.country_id;
+
+2. customer tablosu ile payment tablosunda bulunan payment_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz RIGHT JOIN sorgusunu yazınız.
+
+SELECT payment.payment_id, customer.first_name, customer.last_name FROM customer
+RIGHT JOIN payment ON customer.customer_id = payment.customer_id;
+
+3. customer tablosu ile rental tablosunda bulunan rental_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz FULL JOIN sorgusunu yazınız.
+
+SELECT rental.rental_id, customer.first_name, customer.last_name FROM customer
+FULL JOIN rental ON customer.customer_id = rental.customer_id;
+
+----------------------------------------------
+
+" SQL-Odev11 | UNION | INTERSECT ve EXCEPT "
+
+Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden gerçekleştiriniz.
+
+1. actor ve customer tablolarında bulunan first_name sütunları için tüm verileri sıralayalım.
+
+(SELECT first_name FROM actor)
+UNION
+(SELECT first_name FROM customer);
+
+2. actor ve customer tablolarında bulunan first_name sütunları için kesişen verileri sıralayalım.
+
+(SELECT first_name FROM actor)
+INTERSECT
+(SELECT first_name FROM customer);
+
+3. actor ve customer tablolarında bulunan first_name sütunları için ilk tabloda bulunan ancak ikinci tabloda bulunmayan verileri sıralayalım.
+
+(SELECT first_name FROM actor)
+EXCEPT
+(SELECT first_name FROM customer);
+
+4. İlk 3 sorguyu tekrar eden veriler için de yapalım.
+
+//1
+
+(SELECT first_name FROM actor)
+UNION ALL
+(SELECT first_name FROM customer);
+
+//2
+
+(SELECT first_name FROM actor)
+INTERSECT ALL
+(SELECT first_name FROM customer);
+
+//3
+
+(SELECT first_name FROM actor)
+EXCEPT ALL
+(SELECT first_name FROM customer);
+
+----------------------------------------------
+
+" SQL-Odev12 | Subquery | ANY | ALL "
+
+Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden gerçekleştiriniz.
+
+1. film tablosunda film uzunluğu length sütununda gösterilmektedir. Uzunluğu ortalama film uzunluğundan fazla kaç tane film vardır?
+
+SELECT COUNT(*) FROM film WHERE length >
+(
+	SELECT AVG(length) FROM film 
+);
+
+2. film tablosunda en yüksek rental_rate değerine sahip kaç tane film vardır?
+
+SELECT COUNT(*) FROM film WHERE rental_rate =
+(
+	SELECT MAX(rental_rate) FROM film
+);
+
+3. film tablosunda en düşük rental_rate ve en düşük replacement_cost değerlerine sahip filmleri sıralayınız.
+
+SELECT * FROM film WHERE rental_rate = (SELECT MIN(rental_rate) FROM film)
+AND replacement_cost = (SELECT MIN(replacement_cost) FROM film);
+
+4. payment tablosunda en fazla sayıda alışveriş yapan müşterileri(customer) sıralayınız.
+
+SELECT customer_id, COUNT(*) FROM payment
+GROUP BY customer_id ORDER BY COUNT(*) DESC;
+
+----------------------------------------------
+
+" SQL-Odev13 | An Overview "
+
+Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden gerçekleştiriniz.
+
+1. film tablosunda isminde en az 4 adet 'e' veya 'E' karakteri bulunan kaç tane film vardır?
+
+SELECT COUNT(*) FROM film WHERE title ILIKE '%E%E%E%E%';
+
+2. category tablosundan kategori isimlerini ve kategori başına düşen film sayılarını sıralayınız.
+
+SELECT COUNT(*), category.name FROM category
+JOIN film_category ON film_category.category_id = category.category_id
+JOIN film ON film.film_id = film_category.film_id
+GROUP BY category.name;
+
+3. film tablosunda en fazla sayıda film bulunduran rating kategorisi hangisidir?
+
+SELECT rating, COUNT(*) FROM film
+GROUP BY rating ORDER BY COUNT(*) DESC LIMIT 1;
+
+4. film tablosunda 'K' karakteri ile başlayan en uzun ve replacemet_cost değeri en düşük 4 filmi sıralayınız.
+
+SELECT title, length, replacement_cost FROM film
+WHERE title LIKE 'K%' ORDER BY length DESC, replacement_cost ASC LIMIT 4;
+
+5. customer tablosunda alışverişte en çok harcama yapan müşterinin adı nedir?
+
+SELECT SUM(amount), customer.first_name, customer.last_name FROM payment
+JOIN customer ON customer.customer_id = payment.customer_id
+GROUP BY payment.customer_id, customer.first_name, customer.last_name ORDER BY SUM(amount) DESC LIMIT 1;
 
