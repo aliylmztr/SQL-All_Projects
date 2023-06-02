@@ -30,7 +30,7 @@ WHERE length <= 50 AND NOT (rental_rate = 2.99 OR rental_rate = 4.99);
 
 ----------------------------------------------
 
------ SQL-Odev2 | BETWEEN ve IN -----
+----- SQL-Odev2 | BETWEEN ve IN ----- <a href="https://github.com/aliylmztr/SQL-Odev2">SQL-Odev2 </a>
 
 Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden gerçekleştiriniz.
 
@@ -51,7 +51,7 @@ WHERE rental_rate IN (0.99, 2.99, 4.99) AND replacement_cost IN (12.99, 15.99, 2
 
 ----------------------------------------------
 
------ SQL-Odev3 | LIKE ve ILIKE -----
+----- SQL-Odev3 | LIKE ve ILIKE ----- <a href="https://github.com/aliylmztr/SQL-Odev3">SQL-Odev3 </a>
 
 Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden gerçekleştiriniz.
 
@@ -77,7 +77,7 @@ WHERE title LIKE 'C%' AND length > 90 AND rental_rate = 2.99;
 
 ----------------------------------------------
 
------ SQL-Odev4 | DISTINCT ve COUNT -----
+----- SQL-Odev4 | DISTINCT ve COUNT ----- <a href="https://github.com/aliylmztr/SQL-Odev4">SQL-Odev4 </a>
 
 Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden gerçekleştiriniz.
 
@@ -106,7 +106,7 @@ WHERE city ILIKE '%R';
 
 ----------------------------------------------
 
------ SQL-Odev5 | ORDER BY | LIMIT ve OFFSET -----
+----- SQL-Odev5 | ORDER BY | LIMIT ve OFFSET ----- <a href="https://github.com/aliylmztr/SQL-Odev5">SQL-Odev5 </a>
 
 Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden gerçekleştiriniz.
 
@@ -127,7 +127,7 @@ WHERE store_id = 1 ORDER BY last_name DESC LIMIT 4;
 
 ----------------------------------------------
 
------ SQL-Odev6 | Aggregate Fonksiyonlar -----
+----- SQL-Odev6 | Aggregate Fonksiyonlar ----- <a href="https://github.com/aliylmztr/SQL-Odev6">SQL-Odev6 </a>
 
 Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden gerçekleştiriniz.
 
@@ -152,7 +152,7 @@ WHERE length > 150;
 
 ----------------------------------------------
 
------ SQL-Odev7 | GROUP BY | HAVING -----
+----- SQL-Odev7 | GROUP BY | HAVING ----- <a href="https://github.com/aliylmztr/SQL-Odev7">SQL-Odev7 </a>
 
 Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden gerçekleştiriniz.
 
@@ -177,7 +177,7 @@ GROUP BY country_id ORDER BY COUNT(*) DESC LIMIT 1;
 
 ----------------------------------------------
 
------ SQL-Odev8 | CREATE | DROP | INSERT INTO | UPDATE & SET | DELETE -----
+----- SQL-Odev8 | CREATE | DROP | INSERT INTO | UPDATE & SET | DELETE ----- <a href="https://github.com/aliylmztr/SQL-Odev8">SQL-Odev8 </a>
 
 1. test veritabanınızda employee isimli sütun bilgileri id(INTEGER), name VARCHAR(50), birthday DATE, email VARCHAR(100) olan bir tablo oluşturalım.
 
@@ -359,7 +359,7 @@ RETURNING *;
 
 ----------------------------------------------
 
------ SQL-Odev9 | INNER JOIN -----
+----- SQL-Odev9 | INNER JOIN ----- <a href="https://github.com/aliylmztr/SQL-Odev9">SQL-Odev9 </a>
 
 Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden gerçekleştiriniz.
 
@@ -380,7 +380,7 @@ INNER JOIN rental ON customer.customer_id = rental.customer_id;
 
 ----------------------------------------------
 
------ SQL-Odev10 | LEFT JOIN | RIGHT JOIN | FULL JOIN -----
+----- SQL-Odev10 | LEFT JOIN | RIGHT JOIN | FULL JOIN ----- <a href="https://github.com/aliylmztr/SQL-Odev10">SQL-Odev10 </a>
 
 Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden gerçekleştiriniz.
 
@@ -401,7 +401,7 @@ FULL JOIN rental ON customer.customer_id = rental.customer_id;
 
 ----------------------------------------------
 
------ SQL-Odev11 | UNION | INTERSECT ve EXCEPT -----
+----- SQL-Odev11 | UNION | INTERSECT ve EXCEPT ----- <a href="https://github.com/aliylmztr/SQL-Odev11">SQL-Odev11 </a>
 
 Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden gerçekleştiriniz.
 
@@ -445,7 +445,7 @@ EXCEPT ALL
 
 ----------------------------------------------
 
------ SQL-Odev12 | Subquery | ANY | ALL -----
+----- SQL-Odev12 | Subquery | ANY | ALL ----- <a href="https://github.com/aliylmztr/SQL-Odev12">SQL-Odev12 </a>
 
 Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden gerçekleştiriniz.
 
@@ -475,7 +475,7 @@ GROUP BY customer_id ORDER BY COUNT(*) DESC;
 
 ----------------------------------------------
 
------ SQL-Odev13 | An Overview -----
+----- SQL-Odev13 | An Overview ----- <a href="https://github.com/aliylmztr/SQL-Odev13">SQL-Odev13 </a>
 
 Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden gerçekleştiriniz.
 
