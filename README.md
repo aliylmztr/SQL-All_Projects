@@ -1,7 +1,37 @@
 # SQL-All_Projects
 All my assignments in SQL programming language
 
-www.patika.dev
+![image](https://github.com/aliylmztr/SQL-All_Projects/assets/123991935/cd85cd84-da7f-4768-a998-29e1530592ee)
+
+<a href="www.patika.dev">patika.dev </a>
+
+----------------------------------------------
+
+SQL Project 01 | SELECT | WHERE | Karşılaştırma ve Mantıksal Operatörler ----- <a href="https://github.com/aliylmztr/SQL-Odev1">SQL-Odev1 </a>
+
+SQL Project 02 | BETWEEN ve IN ----- <a href="https://github.com/aliylmztr/SQL-Odev2">SQL-Odev2 </a>
+
+SQL Project 03 | LIKE ve ILIKE ----- <a href="https://github.com/aliylmztr/SQL-Odev3">SQL-Odev3 </a>
+
+SQL Project 04 | DISTINCT ve COUNT ----- <a href="https://github.com/aliylmztr/SQL-Odev4">SQL-Odev4 </a>
+
+SQL Project 05 | ORDER BY | LIMIT ve OFFSET ----- <a href="https://github.com/aliylmztr/SQL-Odev5">SQL-Odev5 </a>
+
+SQL Project 06 | Aggregate Fonksiyonlar ----- <a href="https://github.com/aliylmztr/SQL-Odev6">SQL-Odev6 </a>
+
+SQL Project 07 | GROUP BY | HAVING ----- <a href="https://github.com/aliylmztr/SQL-Odev7">SQL-Odev7 </a>
+
+SQL Project 08 | CREATE | DROP | INSERT INTO | UPDATE & SET | DELETE ----- <a href="https://github.com/aliylmztr/SQL-Odev8">SQL-Odev8 </a>
+
+SQL Project 09 | INNER JOIN ----- <a href="https://github.com/aliylmztr/SQL-Odev9">SQL-Odev9 </a>
+
+SQL Project 10 | LEFT JOIN | RIGHT JOIN | FULL JOIN ----- <a href="https://github.com/aliylmztr/SQL-Odev10">SQL-Odev10 </a>
+
+SQL Project 11 | UNION | INTERSECT ve EXCEPT ----- <a href="https://github.com/aliylmztr/SQL-Odev11">SQL-Odev11 </a>
+
+SQL Project 12 | Subquery | ANY | ALL ----- <a href="https://github.com/aliylmztr/SQL-Odev12">SQL-Odev12 </a>
+
+SQL Project 13 | An Overview ----- <a href="https://github.com/aliylmztr/SQL-Odev13">SQL-Odev13 </a>
 
 ----------------------------------------------
 
