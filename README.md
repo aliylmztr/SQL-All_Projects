@@ -3,7 +3,7 @@ All my assignments in SQL programming language
 
 ![image](https://github.com/aliylmztr/SQL-All_Projects/assets/123991935/cd85cd84-da7f-4768-a998-29e1530592ee)
 
-<a href="www.patika.dev">patika.dev </a>
+<a href="[www.patika.dev](https://www.patika.dev/tr)">patika.dev </a>
 
 ----------------------------------------------
 
